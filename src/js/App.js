@@ -11,10 +11,12 @@ import { Provider } from 'react-redux';
 import {reducer as formReducer} from 'redux-form';
 import history from './helpers/history';
 import ReduxPromise from 'redux-promise';
+import currentUser from './reducers/currentUser';
 
 
 const reduxApp = combineReducers({
-  form: formReducer
+  form: formReducer,
+  currentUser: currentUser
 });
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
