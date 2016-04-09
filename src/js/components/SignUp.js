@@ -2,6 +2,7 @@ import React from 'react';
 import {reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import axios from 'axios';
+import history from '../helpers/history';
 
 const mapStateToProps = (state) => {
   return {
@@ -35,7 +36,7 @@ class SignUp extends React.Component {
   submit(e) {
     const userAtrributes = {
       user: {
-        username: this.props.signup.nickname,
+        nickname: this.props.signup.nickname,
         email:    this.props.signup.email,
         password: this.props.signup.password
       }
@@ -47,6 +48,7 @@ class SignUp extends React.Component {
       type: "LOAD_CURRENT_USER",
       payload: result
     });
+    history.pushState(null, "messages");
 
     e.preventDefault();
   }
