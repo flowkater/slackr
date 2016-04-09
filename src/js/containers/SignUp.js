@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import axios from 'axios';
 import history from '../helpers/history';
 import SignUpForm from '../components/SignUpForm';
+import urlFor from '../helpers/urlFor';
 
 const mapStateToProps = (state) => {
   return {
@@ -43,7 +44,7 @@ export default class SignUp extends React.Component {
       }
     };
 
-    const url = "http://slackr-api.thefirehoseproject.com/1d163b2919d9a30d98db/users";
+    const url = urlFor("/users");
     const result = axios.post(url, userAtrributes);
     this.props.dispatch({
       type: "LOAD_CURRENT_USER",
