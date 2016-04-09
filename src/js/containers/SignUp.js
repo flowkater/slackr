@@ -50,7 +50,7 @@ export default class SignUp extends React.Component {
       type: "LOAD_CURRENT_USER",
       payload: result
     });
-    history.pushState(null, "messages");
+    history.push("messages");
 
     e.preventDefault();
   }
