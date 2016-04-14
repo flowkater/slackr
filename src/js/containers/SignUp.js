@@ -1,10 +1,10 @@
 import React from 'react';
 import {reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
-import axios from 'axios';
 import history from '../helpers/history';
 import SignUpForm from '../components/SignUpForm';
-import urlFor from '../helpers/urlFor';
+import signUp from '../actions/signUp';
+import { bindActionCreators } from 'redux';
 
 const mapStateToProps = (state) => {
   return {
@@ -31,12 +31,17 @@ const getParams = (form, fields) => {
 };
 
 
-@connect(mapStateToProps)
+@connect(
+  mapStateToProps,
+  dispatch => ({
+    ... bindActionCreators({ signUp }, dispatch)
+  } )
+)
 
 
 export default class SignUp extends React.Component {
   submit(e) {
-    const userAtrributes = {
+    const userAttributes = {
       user: {
         nickname: this.props.signup.nickname,
         email:    this.props.signup.email,
@@ -44,12 +49,8 @@ export default class SignUp extends React.Component {
       }
     };
 
-    const url = urlFor("/users");
-    const result = axios.post(url, userAtrributes);
-    this.props.dispatch({
-      type: "LOAD_CURRENT_USER",
-      payload: result
-    });
+    this.props.signUp(userAttributes);
+
     history.push("messages");
 
     e.preventDefault();
