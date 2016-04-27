@@ -11,5 +11,3 @@ WebPack is an amazing tool that provides an awesome developer experience after i
 * Babel
 
 And also supports WebPackDevServer.
-
-This project is meant to transcend the web.  Transcendence.
