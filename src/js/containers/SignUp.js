@@ -40,7 +40,7 @@ export default class SignUp extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if(_.isNumber(nextProps.currentUser.id)) {
-      history.push('messages');
+      history.push('welcome');
     }
   }
 

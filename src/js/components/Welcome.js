@@ -15,7 +15,7 @@ export default class Welcome extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      history.push("sign-up");
+      history.push('messages');
     }, 2000);
   }
 
