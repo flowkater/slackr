@@ -3,6 +3,17 @@ import UserStatus from './UserStatus';
 
 export default class SidePane extends React.Component {
   render() {
+
+    const usersJsx = this.props.users.map((user, index) => {
+      return (
+        <UserStatus
+          status={user.status}
+          nickname={user.nickname}
+          key={user.id}
+        />
+      );
+    });
+
     return (
       <div className="side-pane">
         <div className="team-name">
@@ -33,9 +44,7 @@ export default class SidePane extends React.Component {
             <span className="number">(204)</span>
           </div>
 
-          <UserStatus status="active" nickname="marco"/>
-          <UserStatus status="active" nickname="ken" />
-          <UserStatus status="inactive" nickname="takehiro" />
+          {usersJsx}
 
         </div>
       </div>
