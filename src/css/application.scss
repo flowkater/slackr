@@ -227,3 +227,50 @@ form .error {
 .nickname.inactive {
   font-style: italic;
 }
+
+.message-pane {
+  background-color: white;
+  height: 100%;
+}
+
+.message-pane .header .channelName {
+  color: #444;
+  font-weight: 900;
+}
+
+.message-pane .header .channelName, .message-pane .header .hashtag {
+  font-size:24px;
+}
+
+.message-pane .hashtag {
+  margin-left:20px;
+  font-weight:300;
+  color: #777;
+}
+
+.message-pane .header {
+  padding-top: 10px;
+}
+
+.right-side {
+  position: absolute;
+  right: 20px;
+}
+
+.glyphicon-user {
+  font-size:20px;
+  color: #777;
+  padding-top:4px;
+}
+
+.activeUsers {
+  padding-left:10px;
+  font-size:20px;
+  color: #777;
+}
+
+.glyphicon.glyphicon-log-out {
+  padding-left:40px;
+  font-size:20px;
+  color: #777;
+}
