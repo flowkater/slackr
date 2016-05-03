@@ -18,7 +18,10 @@
   "author": "Michael Farrell",
   "email": "michaelmerrittfarrell@gmail.com",
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "http-server": "^0.8.0",
+    "postcss-loader": "^0.5.1",
+    "precss": "^1.4.0",
     "react-hot-loader": "^1.2.8",
     "source-map-loader": "^0.1.5",
     "svgo": "^0.5.6",
