@@ -1,6 +1,7 @@
 import React from 'react';
 import Message from './Message';
 import avatar from '../../img/avatar.png';
+import MessageInput from './MessageInput';
 
 export default class MessagePane extends React.Component {
   render() {
@@ -35,6 +36,9 @@ export default class MessagePane extends React.Component {
 
           </div>
         </div>
+
+        <MessageInput />
+
       </div>
     );
   }
