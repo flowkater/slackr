@@ -5,11 +5,13 @@ import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 import history from '../helpers/history';
 import ChatPane from '../components/ChatPane';
+import avatar from '../../img/avatar.png';
 
 const mapStateToProps = (state) => {
   return {
     'currentUser': state.currentUser,
-    'users': state.users
+    'users': state.users,
+    'messages': state.messages
   }
 };
 
@@ -27,6 +29,7 @@ export default class ChatWindow extends React.Component {
         signOut={() => {this.signOut();} }
         users={this.props.users}
         currentUser={this.props.currentUser}
+        messages={this.props.messages}
       />
     );
   }

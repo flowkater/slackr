@@ -7,7 +7,7 @@ export default class ApplicationLayout extends React.Component {
       <div>
         <div className="main-container">
           <nav className="navbar navbar-default text-center" role="navigation">
-            <a href="javascript:void(0);">
+            <a href="https://github.com/Mikeysax/slackr">
             Slackr
             </a>
             &nbsp;
