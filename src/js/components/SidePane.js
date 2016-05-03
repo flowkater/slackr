@@ -21,7 +21,7 @@ export default class SidePane extends React.Component {
         </div>
         <div className="green-circle"></div>
         <div className="my nickname">
-          ken
+          {this.props.currentUser.nickname}
         </div>
         <div className="channels">
           <div className="header">
@@ -41,7 +41,7 @@ export default class SidePane extends React.Component {
         <div className="users">
           <div className="header">
             USERS
-            <span className="number">(204)</span>
+            <span className="number"> ({ this.props.users.length }) </span>
           </div>
 
           {usersJsx}
