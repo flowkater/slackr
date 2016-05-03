@@ -8,13 +8,13 @@ export default class ApplicationLayout extends React.Component {
         <div className="main-container">
           <nav className="navbar navbar-default text-center" role="navigation">
             <a href="javascript:void(0);">
-              Slackr
+            Slackr
             </a>
-
+            &nbsp;
             was built by
-
+            &nbsp;
             <a href="http://github.com/Mikeysax">
-              Michael Farrell
+            Michael Farrell
             </a>
           </nav>
 
