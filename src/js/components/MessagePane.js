@@ -37,7 +37,9 @@ export default class MessagePane extends React.Component {
           </div>
         </div>
 
-        <MessageInput />
+        <MessageInput
+          addMessage={this.props.addMessage}
+        />
 
       </div>
     );
