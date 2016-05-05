@@ -11,6 +11,7 @@ const messages = (state = [], action) => {
         ...lastMessage,
         messages: [...lastMessage.messages, message.body]
       };
+
       return [...allButLastMessage, newLastMessage];
     } else {
       const newFullMessage = {
@@ -20,6 +21,7 @@ const messages = (state = [], action) => {
         time: "now",
         avatar_url: message.avatar_url
       };
+
       return [...state, newFullMessage];
     }
     default:

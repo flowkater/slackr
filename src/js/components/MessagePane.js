@@ -2,21 +2,10 @@ import React from 'react';
 import Message from './Message';
 import avatar from '../../img/avatar.png';
 import MessageInput from './MessageInput';
+import MessageList from './MessageList';
 
 export default class MessagePane extends React.Component {
   render() {
-    const messageJsx = this.props.messages.map((message, index) => {
-      return (
-        <Message
-          nickname={message.nickname}
-          time={message.time}
-          messages={message.messages}
-          key={index}
-          avatar_url={message.avatar_url}
-        />
-      );
-    });
-
     return (
       <div className="message-pane container-fluid">
         <div className="header row">
@@ -30,11 +19,10 @@ export default class MessagePane extends React.Component {
             <i className="glyphicon glyphicon-log-out" onClick={() => { this.props.signOut(); } } ></i>
           </div>
 
-          <div className="messageList row container-fluid">
+            <MessageList
+              messages={this.props.messages}
+            />
 
-            {messageJsx}
-
-          </div>
         </div>
 
         <MessageInput
