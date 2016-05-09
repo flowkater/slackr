@@ -5,7 +5,6 @@ import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 import history from '../helpers/history';
 import ChatPane from '../components/ChatPane';
-import avatar from '../../img/avatar.png';
 import getParams from '../helpers/getParams';
 import addMessage from '../actions/addMessage';
 import Firebase from 'firebase';
@@ -36,10 +35,10 @@ export default class ChatWindow extends React.Component {
       publicKey()
     );
 
-    myFirebaseRef.child('messages').endAt().limitToLast(1).on('child_added', (snapshot) => {
+    myFirebaseRef.child('messages').endAt().limitToLast(1).on('child_added', () => {
       this.props.loadMessages();
     });
-  };
+  }
 
   render() {
     return (
@@ -48,7 +47,7 @@ export default class ChatWindow extends React.Component {
         users={this.props.users}
         currentUser={this.props.currentUser}
         messages={this.props.messages}
-        addMessage={() => { this.addMessage(); } }
+        addMessage={() => {this.addMessage();} }
       />
     );
   }

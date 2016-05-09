@@ -1,17 +1,16 @@
 import React from 'react';
-import {reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import history from '../helpers/history';
 import SignUpForm from '../components/SignUpForm';
 import signUp from '../actions/signUp';
-import { bindActionCreators } from 'redux';
+import {bindActionCreators} from 'redux';
 import getParams from '../helpers/getParams';
 import _ from 'lodash';
 
 const mapStateToProps = (state) => {
   return {
-    "signup" : getParams(state.form.signup, ['nickname', 'email', 'password']),
-    "currentUser": state.currentUser
+    'signup' : getParams(state.form.signup, ['nickname', 'email', 'password']),
+    'currentUser': state.currentUser
   };
 }
 

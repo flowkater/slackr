@@ -19,7 +19,7 @@ export default class MessageList extends React.Component {
       node.scrollTop = node.scrollHeight;
     }
   }
-  
+
   render() {
     const messages = this.props.messages.map( (message, index) => {
       return (

@@ -5,7 +5,7 @@ import InputField from './InputField';
 class SignInForm extends React.Component {
 
   render() {
-    const {fields: {email, nickname, password} } = this.props;
+    const {fields: {email, password} } = this.props;
 
     const errors = this.props.currentUser.errors || {};
 
@@ -43,9 +43,7 @@ class SignInForm extends React.Component {
   }
 }
 
-SignInForm = reduxForm({
+export default reduxForm({
   form: 'signin',
   fields: ['email', 'password']
 })(SignInForm);
-
-export default SignInForm;

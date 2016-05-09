@@ -1,6 +1,4 @@
 import React from 'react';
-import Message from './Message';
-import avatar from '../../img/avatar.png';
 import MessageInput from './MessageInput';
 import MessageList from './MessageList';
 

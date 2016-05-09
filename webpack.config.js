@@ -38,6 +38,11 @@ module.exports = {
           'react-hot',
           'babel?stage=0'
         ]
+      },
+      {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
       }
     ]
   }
@@ -48,6 +53,6 @@ function getEntrySources(sources) {
   //    sources.push('webpack-dev-server/client?http://localhost:8080');
   //    sources.push('webpack/hot/only-dev-server');
   //}
-  
+
   return sources;
 }

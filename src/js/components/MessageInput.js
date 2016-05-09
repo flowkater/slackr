@@ -16,9 +16,7 @@ class MessageInput extends React.Component {
   }
 }
 
-MessageInput = reduxForm({
+export default reduxForm({
   form: 'chatMessage',
   fields: ['message']
 })(MessageInput);
-
-export default MessageInput;

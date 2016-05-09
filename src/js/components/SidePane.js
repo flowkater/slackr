@@ -4,7 +4,7 @@ import UserStatus from './UserStatus';
 export default class SidePane extends React.Component {
   render() {
 
-    const usersJsx = this.props.users.map((user, index) => {
+    const usersJsx = this.props.users.map((user) => {
       return (
         <UserStatus
           status={user.status}
@@ -50,5 +50,4 @@ export default class SidePane extends React.Component {
       </div>
     );
   }
-
 }

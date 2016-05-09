@@ -19,6 +19,8 @@
   "email": "michaelmerrittfarrell@gmail.com",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "babel-eslint": "^6.0.4",
+    "eslint-loader": "^1.3.0",
     "http-server": "^0.8.0",
     "postcss-loader": "^0.5.1",
     "precss": "^1.4.0",

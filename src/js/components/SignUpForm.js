@@ -38,13 +38,13 @@ class SignUpForm extends React.Component {
               field={password} errors={errors.password}
             />
 
-            <button type="submit" className="btn btn-block btn-primary">Create Account</button>
+          <button type="submit" className="btn btn-block btn-primary">Create Account</button>
 
           </div>
           <br className="clear" />
 
           <div className="text-center orSignIn">
-            <Link to='sign-in'>Sign In</Link>
+            <Link to="sign-in">Sign In</Link>
           </div>
         </form>
       </div>
@@ -53,9 +53,7 @@ class SignUpForm extends React.Component {
 
 }
 
-SignUpForm = reduxForm({
+export default reduxForm({
   form: 'signup',
   fields: ['nickname', 'email', 'password']
 })(SignUpForm);
-
-export default SignUpForm;
